@@ -1,0 +1,176 @@
+
+.kanban-section {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.kanban-title {
+  margin-bottom: 22px;
+}
+
+.kanban-title h2 {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.kanban-title p {
+  color: #888;
+  font-size: 14px;
+}
+
+.kanban-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+.kanban-column {
+  background: #f4f5f9;
+  border-radius: 14px;
+  padding: 16px;
+  min-height: 350px;
+  border: 2px solid transparent;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.kanban-column-over {
+  border-color: #6366f1;
+  background: #eef0ff;
+}
+
+.kanban-column-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.kanban-column-heading h3 {
+  font-size: 16px;
+  color: #333;
+}
+
+.kanban-count {
+  background: #e1e4f0;
+  color: #444;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.kanban-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 260px;
+}
+
+.kanban-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e9e9ef;
+  transition: box-shadow 0.2s;
+}
+
+.kanban-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
+}
+
+.kanban-card.dragging {
+  opacity: 0.35;
+}
+
+.kanban-overlay-card {
+  cursor: grabbing;
+  transform: rotate(2deg);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.kanban-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.kanban-card h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #222;
+  overflow-wrap: anywhere;
+}
+
+.kanban-card p {
+  font-size: 13px;
+  color: #777;
+  margin-top: 6px;
+}
+
+.kanban-drag-handle {
+  border: none;
+  background: transparent;
+  color: #777;
+  font-size: 24px;
+  cursor: grab;
+  padding: 0 5px;
+  touch-action: none;
+}
+
+.kanban-drag-handle:active {
+  cursor: grabbing;
+}
+
+.priority {
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  background: #eee;
+}
+
+.priority-high {
+  color: #c0392b;
+  background: #fde8e7;
+}
+
+.priority-medium {
+  color: #a66b00;
+  background: #fff2d6;
+}
+
+.priority-low {
+  color: #16804a;
+  background: #e1f6e9;
+}
+
+.kanban-status-select {
+  width: 100%;
+  margin-top: 9px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+}
+
+.kanban-empty {
+  text-align: center;
+  color: #999;
+  font-size: 13px;
+  padding: 35px 8px;
+  border: 1px dashed #ccc;
+  border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+  .kanban-container {
+    grid-template-columns: 1fr;
+  }
+
+  .kanban-column {
+    min-height: 220px;
+  }
+}

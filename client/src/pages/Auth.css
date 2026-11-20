@@ -1,0 +1,184 @@
+
+/* =====================================
+   BUG TRACKER - LOGIN & REGISTER DESIGN
+   Pastel Pink Theme
+===================================== */
+
+.auth-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+
+  background:
+    linear-gradient(
+      rgba(255, 231, 232, 0.65),
+      rgba(255, 231, 232, 0.65)
+    ),
+    url('/bug-tracker-bg.png');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Authentication Card */
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  padding: 40px 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid #f5c5d5;
+  border-radius: 22px;
+
+  box-shadow: 0 12px 40px rgba(120, 55, 80, 0.15);
+}
+
+/* Main Heading */
+
+.auth-card h1 {
+  color: #c94f79 !important;
+  font-size: 36px;
+  font-weight: 750;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* Subtitle */
+
+.auth-card > p {
+  color: #896779 !important;
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+/* Input Fields */
+
+.auth-card input {
+  width: 100%;
+  height: 49px;
+  padding: 12px 14px;
+
+  background: #ffffff !important;
+  color: #392b35 !important;
+
+  border: 1px solid #e5a5bd !important;
+  border-radius: 10px !important;
+
+  font-size: 15px;
+  outline: none;
+  box-shadow: none !important;
+}
+
+.auth-card input::placeholder {
+  color: #a18b96 !important;
+  opacity: 1;
+}
+
+.auth-card input:focus {
+  border: 2px solid #db78a0 !important;
+  box-shadow: 0 0 0 3px rgba(219, 120, 160, 0.12) !important;
+}
+
+/* Autofill Fix */
+
+.auth-card input:-webkit-autofill,
+.auth-card input:-webkit-autofill:hover,
+.auth-card input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #392b35 !important;
+  box-shadow: 0 0 0 1000px white inset !important;
+}
+
+/* Login and Register Button */
+
+.auth-card > button[type="submit"] {
+  width: 100%;
+  height: 49px;
+
+  background: linear-gradient(135deg, #ed83a5, #d65d86);
+  color: white;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.auth-card > button[type="submit"]:hover {
+  background: #c94f79;
+  transform: translateY(-2px);
+}
+
+.auth-card > button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Error and Success Messages */
+
+.auth-card .auth-message {
+  color: #bd426b !important;
+  background: #fff0f4;
+  border: 1px solid #f4c5d5;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* Login / Register Switch */
+
+.auth-card .auth-switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+
+  color: #896779 !important;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.auth-card .auth-switch button {
+  background: transparent !important;
+  color: #c94f79 !important;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.auth-card .auth-switch button:hover {
+  color: #963655 !important;
+  text-decoration: underline;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 500px) {
+  .auth-page {
+    padding: 16px;
+  }
+
+  .auth-card {
+    padding: 30px 22px;
+  }
+
+  .auth-card h1 {
+    font-size: 30px;
+  }
+}
