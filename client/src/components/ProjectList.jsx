@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 
-const API_URL = 'http://localhost:5000/api/projects';
+const API_URL = 'https://bug-tracker-2fq0.onrender.com/api/projects';
 
 function ProjectList({ onProjectsChange }) {
   const [projects, setProjects] = useState([]);

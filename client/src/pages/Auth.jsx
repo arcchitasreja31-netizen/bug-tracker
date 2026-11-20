@@ -25,7 +25,7 @@ function Auth({ onLogin }) {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/auth/${endpoint}`,
+        `https://bug-tracker-2fq0.onrender.com/api/auth/${endpoint}`,
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },

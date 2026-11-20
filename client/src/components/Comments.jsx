@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 
-const API_URL = 'http://localhost:5000/api/comments';
+const API_URL = 'https://bug-tracker-2fq0.onrender.com/api/comments';
 
 function Comments({ issueId }) {
   const [comments, setComments] = useState([]);

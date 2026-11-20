@@ -14,7 +14,7 @@ function InviteTeam() {
   useEffect(() => {
     async function loadProjects() {
       try {
-        const response = await fetch('http://localhost:5000/api/projects', {
+        const response = await fetch('https://bug-tracker-2fq0.onrender.com/api/projects', {
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -47,7 +47,7 @@ function InviteTeam() {
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:5000/api/team/invite', {
+      const response = await fetch('https://bug-tracker-2fq0.onrender.com/api/team/invite', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Comments from './Comments';
 
-const API_URL = 'http://localhost:5000/api/issues';
+const API_URL = 'https://bug-tracker-2fq0.onrender.com/api/issues';
 
 function IssueList({ issues, setIssues }) {
   const [showForm, setShowForm] = useState(false);

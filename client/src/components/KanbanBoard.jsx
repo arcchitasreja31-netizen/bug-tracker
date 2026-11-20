@@ -121,7 +121,7 @@ function KanbanBoard({ issues, setIssues }) {
       }
 
       const response = await fetch(
-        `http://localhost:5000/api/issues/${issueId}`,
+        `https://bug-tracker-2fq0.onrender.com/api/issues/${issueId}`,
         {
           method: 'PUT',
           headers: {

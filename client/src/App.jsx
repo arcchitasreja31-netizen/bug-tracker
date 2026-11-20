@@ -38,7 +38,7 @@ useEffect(() => {
   async function acceptInvitation() {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/team/accept/${encodeURIComponent(inviteToken)}`,
+        `https://bug-tracker-2fq0.onrender.com/api/team/accept/${encodeURIComponent(inviteToken)}`,
         {
           method: 'POST',
           headers: {
@@ -85,7 +85,7 @@ useEffect(() => {
 
       try {
         const response = await fetch(
-          'http://localhost:5000/api/issues',
+          'https://bug-tracker-2fq0.onrender.com/api/issues',
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem('token')}`
